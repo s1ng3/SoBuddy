@@ -1,0 +1,45 @@
+﻿@{
+    ViewBag.Title = "Register";
+}
+
+<div class="center-screen">
+    <div style="width: 300px;">
+        <div class="align-center">
+            <br/><br/><br/>
+            <h2>Register</h2>
+        </div>
+        <form method="post" action="/Account/Register">
+            <br/>
+            <div class="form-group">
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" required class="form-control"/>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required class="form-control"/>
+            </div>
+
+            <div class="form-group">
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required class="form-control"/>
+            </div>
+
+            <div class="form-group">
+                <label for="confirmPassword">Confirm Password:</label>
+                <input type="password" id="confirmPassword" name="confirmPassword" required class="form-control"/>
+            </div>
+
+            <div class="form-group">
+                <input type="submit" value="Register" class="btn btn-primary form-button"/>
+                <button class="back-button" onclick="goBack()" type="button">Back</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+<script>
+function goBack() {
+    window.history.back();
+}
+</script>
